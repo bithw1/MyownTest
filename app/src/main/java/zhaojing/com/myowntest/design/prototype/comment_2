@@ -1,0 +1,45 @@
+你的代码，这些内容要放到方法或者代码块里，直接这么写，不对
+
+public class ModifyUser {
+
+   LoginSession session=LoginSession.getInstance();//得到副本
+   User newUser=session.getLogineduser();
+    //注意以下只能用get/set方法
+   User a=new User();
+
+
+
+
+
+
+
+}
+
+
+改成：
+
+
+public class ModifyUser {
+
+public static void main(String[] args) {
+   LoginSession session=LoginSession.getInstance();//得到副本
+   User newUser=session.getLogineduser();
+    //注意以下只能用get/set方法
+   User a=new User();
+}
+
+}
+
+
+
+
+这么写也可以，这是代码块：
+
+public class ModifyUser {
+  {
+   LoginSession session=LoginSession.getInstance();//得到副本
+   User newUser=session.getLogineduser();
+    //注意以下只能用get/set方法
+   User a=new User();
+   }
+}
